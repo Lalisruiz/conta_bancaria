@@ -3,10 +3,12 @@
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "@types/readline-sync": "^1.4.8"
+    "@types/node": "^24.0.12",
+    "@types/readline-sync": "^1.4.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   },
   "scripts": {
     "start": "tsc && node conta-bancaria/index.js"
   }
 }
-
