@@ -1,4 +1,4 @@
-import readlineSync from "readline-sync";
+import * as readlineSync from 'readline-sync'; 
 import { Colors } from "./util";
 
 export class Menu {

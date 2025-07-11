@@ -1,11 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const conta_1 = require("../model/conta");
-const ler = require("readline-sync");
+import { Conta } from "../model/conta.ts";
 function main() {
     // Criando uma lista de contas
-    const conta1 = new conta_1.Conta(1, 'Larissa Ruiz', 1000);
-    const conta2 = new conta_1.Conta(2, 'João Silva', 500);
+    const conta1 = new Conta(1, 'Larissa Ruiz', 1000);
+    const conta2 = new Conta(2, 'João Silva', 500);
     const contas = [conta1, conta2];
     while (true) {
         console.log('\n=== MENU CONTA BANCÁRIA ===');

@@ -31,24 +31,4 @@ export class Conta {
         console.log(`Saldo: R$ ${this._saldo.toFixed(2)}`);
         console.log('------------------------');
     }
-    // Método para depositar valor
-    depositar(valor) {
-        if (valor > 0) {
-            this._saldo += valor;
-            console.log(`✅ Depósito de R$ ${valor.toFixed(2)} realizado com sucesso.`);
-        }
-        else {
-            console.log('❌ Valor inválido para depósito.');
-        }
-    }
-    // Método para sacar valor
-    sacar(valor) {
-        if (valor > 0 && valor <= this._saldo) {
-            this._saldo -= valor;
-            console.log(`✅ Saque de R$ ${valor.toFixed(2)} realizado com sucesso.`);
-        }
-        else {
-            console.log('❌ Saque não permitido. Verifique o valor ou saldo.');
-        }
-    }
 }

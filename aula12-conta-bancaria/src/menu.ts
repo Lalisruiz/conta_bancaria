@@ -1,5 +1,5 @@
 import { Conta } from "./model/conta";
-import ler = require('readline-sync');
+import * as readlineSync from 'readline-sync';
 
 function main() {
   // Criando uma lista de contas
@@ -14,7 +14,7 @@ function main() {
     console.log('3 - Sacar');
     console.log('0 - Sair');
 
-    const opcao = ler.questionInt('Escolha uma opção: ');
+    const opcao = readlineSync.questionInt('Escolha uma opção: ');
 
     switch (opcao) {
       case 1:
@@ -24,8 +24,8 @@ function main() {
 
       case 2:
         console.log('\n--- Depósito ---');
-        const numeroDep = ler.questionInt('Número da conta: ');
-        const valorDep = ler.questionFloat('Valor para depósito: ');
+        const numeroDep = readlineSync.questionInt('Número da conta: ');
+        const valorDep = readlineSync.questionFloat('Valor para depósito: ');
         const contaDep = contas.find((c) => c['numero'] === numeroDep);
         if (contaDep) {
           contaDep.depositar(valorDep);
@@ -36,8 +36,8 @@ function main() {
 
       case 3:
         console.log('\n--- Saque ---');
-        const numeroSaq = ler.questionInt('Número da conta: ');
-        const valorSaq = ler.questionFloat('Valor para saque: ');
+        const numeroSaq = readlineSync.questionInt('Número da conta: ');
+        const valorSaq = readlineSync.questionFloat('Valor para saque: ');
         const contaSaq = contas.find((c) => c['numero'] === numeroSaq);
         if (contaSaq) {
           contaSaq.sacar(valorSaq);
@@ -48,13 +48,13 @@ function main() {
 
       case 0:
         console.log('Saindo do programa...');
-        return;  // sai da função main e encerra o programa
+        return;
 
       default:
         console.log('Opção inválida. Tente novamente.');
     }
   }
 }
-
-// Chama a função principal para iniciar o programa
+1
 main();
+
