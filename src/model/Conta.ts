@@ -1,4 +1,5 @@
-export class Conta {
+export abstract class Conta {
+>>>>>>> 6c23263 ( Implementação da Interface no Projeto Conta Bancária)
 
     private _numero: number;
     private _agencia: number;
