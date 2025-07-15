@@ -1,5 +1,4 @@
 export abstract class Conta {
->>>>>>> 6c23263 ( Implementação da Interface no Projeto Conta Bancária)
 
     private _numero: number;
     private _agencia: number;
@@ -56,12 +55,10 @@ export abstract class Conta {
     }
 
     public sacar(valor: number): boolean {
-
         if (this._saldo < valor) {
             console.log("\n Saldo Insuficiente!");
             return false;
         }
-
         this._saldo = this._saldo - valor;
         return true;
     }
@@ -70,10 +67,17 @@ export abstract class Conta {
         this._saldo = this._saldo + valor;
     }
 
+    public transferir(contaDestino: Conta, valor: number): void {
+        if (this.sacar(valor)) {
+            contaDestino.depositar(valor);
+            console.log("Transferência realizada com sucesso!");
+        } else {
+            console.log("Transferência falhou: saldo insuficiente!");
+        }
+    }
+
     public visualizar(): void {
-
         let tipo: string = "";
-
         switch (this._tipo) {
             case 1:
                 tipo = "Conta Corrente";
@@ -82,7 +86,6 @@ export abstract class Conta {
                 tipo = "Conta Poupança";
                 break;
         }
-
         console.log("\n\n*****************************************************");
         console.log("Dados da Conta:");
         console.log("*****************************************************");
@@ -91,7 +94,5 @@ export abstract class Conta {
         console.log("Tipo da Conta: " + tipo);
         console.log("Titular: " + this._titular);
         console.log("Saldo: " + this._saldo.toFixed(2));
-
     }
-
 }

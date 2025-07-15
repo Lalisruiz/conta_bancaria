@@ -1,20 +1,24 @@
 {
   "name": "conta_bancaria",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^24.0.13",
-    "readline-sync": "^1.4.10",
-    "ts-node": "^10.9.2"
+    "colors": "^1.4.0"
   },
   "devDependencies": {
-    "@types/readline-sync": "^1.4.8"
+    "@types/node": "^20.19.7",
+    "@types/readline-sync": "^1.4.8",
+    "readline-sync": "^1.4.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   },
   "repository": {
     "type": "git",
