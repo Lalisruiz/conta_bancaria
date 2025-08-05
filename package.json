@@ -1,9 +1,9 @@
 {
   "name": "conta_bancaria",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "dist/Menu.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "ts-node Menu.ts",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
